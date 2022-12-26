@@ -18,17 +18,11 @@
 		// Add a 'click' listener
 		submitButton.addEventListener('click', function() {
 		  // Get the config data from the UI elements
-		  var backgroundColor = document.getElementById('background_color_input');
-		  var foregroundColor = document.getElementById('foreground_color_input');
-		  var secondTickCheckbox = document.getElementById('second_tick_checkbox');
-		  var animationsCheckbox = document.getElementById('animations_checkbox');
+		  var token = document.getElementById('tesla_auth_token');
 	  
 		  // Make a data object to be sent, coercing value types to integers
 		  var options = {
-			'background_color': parseInt(backgroundColor.value, 16),
-			'foreground_color': parseInt(foregroundColor.value, 16),
-			'second_ticks': secondTickCheckbox.checked == 'true' ? 1 : 0,
-			'animations': animationsCheckbox.checked == 'true' ? 1 : 0
+			'tesla_api_token': token,
 		  };
 	  
 		  // Determine the correct return URL (emulator vs real watch)
