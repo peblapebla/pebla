@@ -18,7 +18,7 @@
 		// Add a 'click' listener
 		submitButton.addEventListener('click', function() {
 		  // Get the config data from the UI elements
-		  var token = document.getElementById('tesla_auth_token');
+		  var token = document.getElementById('tesla_auth_token').value;
 	  
 		  // Make a data object to be sent, coercing value types to integers
 		  var options = {
